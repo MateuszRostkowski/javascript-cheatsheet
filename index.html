@@ -4,9 +4,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Javascript Cheatsheet</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/monokai-sublime.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+
+    </script>
 </head>
 <body>
 
+    <div class="container">
+        <h1 class="title">Javascript Cheatsheet</h1>
+        <hr>
+        <h2 class="cheat-title">Varibles</h2>
+        <pre><code class="javascript">var variable;                   // variable
+var hello = "Hello World";      // variable string assigment
+var hi = "Hi" + " " + "Joe";    // = "Hi Joe"
+var sum = 1 + 2 + "3";          // d = "33"
+var a = [1, 2, 3, 48];          // variable array assigment
+var b = false;                  // boolean (true or false)
+var r = /()/;                   // RegEx - regualr expresions
+var f = function() {};          // function object
+const PI = 3.14;                // constant variable - you can't change it later
+var first = 12,
+    second = 13,
+    third = 14;                 // you can declare variables after comma and skip var keyword
+let z = "zzz";                  // block scope local variable</code></pre>
+
+
+
+    <h2 class="cheat-title">Strict mode</h2>
+
+    <pre><code class="javascript">"use strict";      // Turns on strict mode to write secure mode
+x = 1              // Throws an error, because there is missing var keyword</code></pre>
+
+    <h2 class="cheat-title">Loops</h2>
+
+    <pre><code class="javascript">// Do while loop
+let i = 1;
+do {
+    i *= 2;
+    console.log(i)
+} while (i < 10);
+</code></pre>
+
+<pre><code class="javascript">// While loop
+while (i < 10) {
+    i++;
+    console.log(i);
+}
+</code></pre>
+
+<pre><code class="javascript">// For loop
+let i = 0;
+for(i; i <= 10; i++) {
+    console.log(i);
+}
+</code></pre>
+
+
+<pre><code class="javascript">// For loop with break keyword
+let i = 0;
+for(i; i <= 10; i++) {
+    if (i === 5) {
+        console.log("i is: " + i + " and loop stop here");
+        break;
+    }
+    console.log(i);
+}
+</code></pre>
+
+<pre><code class="javascript">// For loop with break keyword
+let i = 0;
+for(i; i <= 10; i++) {
+    if (i === 5) {
+        console.log("i is: " + i + " and loop skips when i == 5");
+        continue;
+    }
+    console.log(i);
+}
+</code></pre>
+
+
+    <h2 class="cheat-title">Strict mode</h2>
+    <pre><code class="javascript">"use strict";   // Turns on strict mode to write secure mode
+x = 1              // Throws an error, because there is missing var keyword</code></pre>
+
+    <h2 class="cheat-title">Strict mode</h2>
+    <pre><code class="javascript">"use strict";   // Turns on strict mode to write secure mode
+x = 1              // Throws an error, because there is missing var keyword</code></pre>
+
+
+    </div>
+    <script src="app.js"></script>
 </body>
 </html>
