@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
 .title {
@@ -12,4 +13,57 @@ body {
 
 .container {
     margin: 0 30px;
+}
+
+.table-of-contents {
+    margin: 70px 70px;
+}
+
+.table-of-contents a {
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+.table-of-contents li {
+    transition: 0.3s ease;
+}
+
+.table-of-contents li:hover {
+    background-color: rgba(196, 196, 196, 0.507);
+}
+
+#scroll-to-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    background-color: rgba(255, 179, 66, 0.74);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+}
+
+
+#scroll-to-top:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#scroll-to-top:active {
+    background-color: #555;
+}
+
+#scroll-to-top.show {
+    opacity: 1;
+    visibility: visible;
 }

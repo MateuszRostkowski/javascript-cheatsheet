@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Javascript Cheatsheet</title>
     <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/monokai-sublime.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
@@ -27,15 +28,19 @@
         <h1 class="title">Javascript Cheatsheet</h1>
         <hr>
 
-        <h2 class="cheat-title">Basics</h2>
+        <ol class="table-of-contents">
+            
+        </ol>
+
+        <h2 class="cheat-title" id="cheat-title-1">Basics</h2>
         <pre><code class="javascript"></code></pre>
 
-        <h2 class="cheat-title">Strict mode</h2>
+        <h2 class="cheat-title" id="cheat-title-2">Strict mode</h2>
 
         <pre><code class="javascript">"use strict";      // Turns on strict mode to write secure mode
 x = 1              // Throws an error, because there is missing var keyword</code></pre>
 
-        <h2 class="cheat-title">Varibles</h2>
+        <h2 class="cheat-title" id="cheat-title-3">Varibles</h2>
         <pre><code class="javascript">var variable;                   // variable
 var hello = "Hello World";      // variable string assigment
 var hi = "Hi" + " " + "Joe";    // = "Hi Joe"
@@ -51,7 +56,7 @@ var first = 12,
 let z = "zzz";                  // block scope local variable</code></pre>
 
 
-        <h2 class="cheat-title">Data Types</h2>
+        <h2 class="cheat-title"  id="cheat-title-4">Data Types</h2>
         <pre><code class="javascript">var age = 18;                       // Number
 var name = "Jane"                   // String
 var person = {
@@ -64,7 +69,7 @@ var a;
 typeof a;                           // Undefined
 var empty = null                    // Null value</code></pre>
 
-        <h2 class="cheat-title">Object</h2>
+        <h2 class="cheat-title" id="cheat-title-5">Object</h2>
         <pre><code class="javascript">var student = {                                     // object name
     firstName: "Jane",                              // list of properties and values
     lastName: "Doe",
@@ -83,10 +88,9 @@ console.log(student.age)                            // 20
 console.log(name)                                   // "Jane Doe"</code></pre>
 
 
-        <h2 class="cheat-title">Loops</h2>
+        <h2 class="cheat-title" id="cheat-title-6">Do while loop</h2>
 
-        <pre><code class="javascript">// Do while loop
-let i = 1;
+        <pre><code class="javascript">let i = 1;
 let numbers = ""
 
 do {
@@ -96,8 +100,9 @@ do {
 
 console.log(numbers) // "2, 4, 8, 16, ";</code></pre>
 
-        <pre><code class="javascript">// While loop
-let i = 0;
+        <h2 class="cheat-title" id="cheat-title-7">While loop</h2>
+
+        <pre><code class="javascript">let i = 0;
 let numbers = ""
 
 while (i < 10) {
@@ -106,9 +111,10 @@ while (i < 10) {
 }
 
 console.log(numbers)  // "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "</code></pre>
+    
+<h2 class="cheat-title" id="cheat-title-8">For loop</h2>
 
-<pre><code class="javascript">// For loop
-let i = 0;
+<pre><code class="javascript">let i = 0;
 let numbers = ""
 
 for (i; i <= 10; i++) {
@@ -117,9 +123,9 @@ for (i; i <= 10; i++) {
 
 console.log(numbers)  // "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "</code></pre>
 
+<h2 class="cheat-title" id="cheat-title-9">For loop with "break" keyword</h2>
 
-<pre><code class="javascript">// For loop with break keyword
-let i = 0;
+<pre><code class="javascript">let i = 0;
 let numbers = "";
 
 for (i; i <= 10; i++) {
@@ -132,8 +138,9 @@ for (i; i <= 10; i++) {
 
 console.log(numbers)  // "0, 1, 2, 3, 4, "</code></pre>
 
-<pre><code class="javascript">// For loop with break keyword
-let i = 0;
+<h2 class="cheat-title" id="cheat-title-10">For loop with "continue" keyword</h2>
+
+<pre><code class="javascript">let i = 0;
 let numbers = "";
 
 for(i; i <= 10; i++) {
@@ -146,7 +153,9 @@ for(i; i <= 10; i++) {
 
 console.log(numbers)  // "0, 1, 2, 3, 4, 6, 7, 8, 9, 10, "</code></pre>
 
-<h2 class="cheat-title">If Else</h2>
+
+
+<h2 class="cheat-title" id="cheat-title-11">If Else</h2>
 <pre><code class="javascript">var age = 15
 let status = ""
 
@@ -159,7 +168,7 @@ if((age >= 14) && (age < 19)){      // logical condition
 console.log(status)                 // "Eligible" </code></pre>
 
 
-    <h2 class="cheat-title">Switch statement</h2>
+    <h2 class="cheat-title" id="cheat-title-12">Switch statement</h2>
     <pre><code class="javascript">let weekDay = ""
 let day = new Date().getDay()
 
@@ -177,20 +186,23 @@ switch(day) {
 console.log(day)                       // 6 or whatever the day is
 console.log(weekDay)                   // "Saturday"</code></pre>
 
-    <h2 class="cheat-title"></h2>
+    <h2 class="cheat-title" id="cheat-title-13"></h2>
     <pre><code class="javascript"></code></pre>
     
-    <h2 class="cheat-title"></h2>
+    <h2 class="cheat-title" id="cheat-title-14"></h2>
     <pre><code class="javascript"></code></pre>
     
-    <h2 class="cheat-title"></h2>
+    <h2 class="cheat-title" id="cheat-title-15"></h2>
     <pre><code class="javascript"></code></pre>
 
-    <h2 class="cheat-title"></h2>
+    <h2 class="cheat-title" id="cheat-title-16"></h2>
     <pre><code class="javascript"></code></pre>
 
 
     </div>
+
+    <div id="scroll-to-top" class="show"><i class="fas fa-angle-up"></i></div>
+    
     <script src="app.js"></script>
 </body>
 </html>

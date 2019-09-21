@@ -1,19 +1,38 @@
 "use strict";
 
-const x = 1;
+const headings = document.querySelectorAll('.cheat-title')
+const contents = document.querySelector('.table-of-contents')
 
-let weekDay = ""
-let day = new Date().getDay()
+for(let i = 0; i < headings.length; i++) {
+    const listItem = document.createElement('li')
+    const link = document.createElement('a')
 
-switch (day) {
-    case 6:
-        weekDay = "Saturday";          // if (day == 6)
-        break;
-    case 0:
-        weekDay = "Sunday";            // if (day == 0)
-        break;
-    default:
-        weekDay = "Whatever"           // else
+    link.setAttribute('href', `#cheat-title-${i + 1}`)
+    listItem.innerHTML = headings[i].innerText
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+
+
+    link.appendChild(listItem)
+    contents.appendChild(link)
 }
-console.log(day)                       // 6 or whatever the day is
-console.log(weekDay)                   // "Saturday"
+
+const scrollToTop = document.querySelector('#scroll-to-top')
+
+scrollToTop.addEventListener(
+    'click',
+    () => {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+        })
+    })
