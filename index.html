@@ -27,6 +27,9 @@
         <h1 class="title">Javascript Cheatsheet</h1>
         <hr>
 
+        <h2 class="cheat-title">Basics</h2>
+        <pre><code class="javascript"></code></pre>
+
         <h2 class="cheat-title">Strict mode</h2>
 
         <pre><code class="javascript">"use strict";      // Turns on strict mode to write secure mode
@@ -68,7 +71,7 @@ var empty = null                    // Null value</code></pre>
     age: 18,
     height: 180,
     fullName: function(){                           //object function
-        return this.firstName + " " + lastName
+        return this.firstName + " " + this.lastName
     }
 }
 
@@ -84,50 +87,104 @@ console.log(name)                                   // "Jane Doe"</code></pre>
 
         <pre><code class="javascript">// Do while loop
 let i = 1;
+let numbers = ""
+
 do {
     i *= 2;
-    console.log(i)
-} while (i < 10);</code></pre>
+    numbers += i + ", "
+} while (i < 10)
+
+console.log(numbers) // "2, 4, 8, 16, ";</code></pre>
 
         <pre><code class="javascript">// While loop
+let i = 0;
+let numbers = ""
+
 while (i < 10) {
     i++;
-    console.log(i);
-}</code></pre>
+    numbers += i + ", "
+}
+
+console.log(numbers)  // "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "</code></pre>
 
 <pre><code class="javascript">// For loop
 let i = 0;
-for(i; i <= 10; i++) {
-    console.log(i);
-}</code></pre>
+let numbers = ""
+
+for (i; i <= 10; i++) {
+    numbers += i + ", "
+}
+
+console.log(numbers)  // "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "</code></pre>
 
 
 <pre><code class="javascript">// For loop with break keyword
 let i = 0;
-for(i; i <= 10; i++) {
+let numbers = "";
+
+for (i; i <= 10; i++) {
     if (i === 5) {
         console.log("i is: " + i + " and loop stop here");
         break;
     }
-    console.log(i);
-}</code></pre>
+    numbers += i + ", "
+}
+
+console.log(numbers)  // "0, 1, 2, 3, 4, "</code></pre>
 
 <pre><code class="javascript">// For loop with break keyword
 let i = 0;
+let numbers = "";
+
 for(i; i <= 10; i++) {
     if (i === 5) {
         console.log("i is: " + i + " and loop skips when i == 5");
         continue;
     }
-    console.log(i);
-}</code></pre>
+    numbers += i + ", ";
+}
+
+console.log(numbers)  // "0, 1, 2, 3, 4, 6, 7, 8, 9, 10, "</code></pre>
 
 <h2 class="cheat-title">If Else</h2>
-<pre><code class="javascript"></code></pre>
+<pre><code class="javascript">var age = 15
+let status = ""
+
+if((age >= 14) && (age < 19)){      // logical condition
+    status = "Eligible";            // executed if condition is true
+}else {                             // else block is optional
+    status = "Not eligible";        // executed if condition is false
+}
+
+console.log(status)                 // "Eligible" </code></pre>
 
 
-<h2 class="cheat-title"></h2>
-<pre><code class="javascript"></code></pre>
+    <h2 class="cheat-title">Switch statement</h2>
+    <pre><code class="javascript">let weekDay = ""
+let day = new Date().getDay()
+
+switch(day) {
+    case 6:
+        weekDay = "Saturday";          // if (day == 6)
+        break;
+    case 0: 
+        weekDay = "Sunday";            // if (day == 0)
+        break;
+    default: 
+        weekDay = "Whatever"           // else
+}
+
+console.log(day)                       // 6 or whatever the day is
+console.log(weekDay)                   // "Saturday"</code></pre>
+
+    <h2 class="cheat-title"></h2>
+    <pre><code class="javascript"></code></pre>
+    
+    <h2 class="cheat-title"></h2>
+    <pre><code class="javascript"></code></pre>
+    
+    <h2 class="cheat-title"></h2>
+    <pre><code class="javascript"></code></pre>
 
     <h2 class="cheat-title"></h2>
     <pre><code class="javascript"></code></pre>

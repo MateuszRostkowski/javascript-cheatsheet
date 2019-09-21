@@ -2,19 +2,18 @@
 
 const x = 1;
 
-var student = {
-    firstName: "Jane",
-    lastName: "Doe",
-    age: 18,
-    height: 180,
-    fullName: function(){
-        return this.firstName + " " + this.lastName
-    }
+let weekDay = ""
+let day = new Date().getDay()
+
+switch (day) {
+    case 6:
+        weekDay = "Saturday";          // if (day == 6)
+        break;
+    case 0:
+        weekDay = "Sunday";            // if (day == 0)
+        break;
+    default:
+        weekDay = "Whatever"           // else
 }
-
-student.age = 19;
-student.age++;
-const name = student.fullName();
-
-console.log(student.age)
-console.log(name)
+console.log(day)                       // 6 or whatever the day is
+console.log(weekDay)                   // "Saturday"
