@@ -2,11 +2,19 @@
 
 const x = 1;
 
-let i = 0;
-for (i; i <= 10; i++) {
-    if (i === 5) {
-        console.log("i is: " + i + " and loop skips when i == 5");
-        continue;
+var student = {
+    firstName: "Jane",
+    lastName: "Doe",
+    age: 18,
+    height: 180,
+    fullName: function(){
+        return this.firstName + " " + this.lastName
     }
-    console.log(i);
 }
+
+student.age = 19;
+student.age++;
+const name = student.fullName();
+
+console.log(student.age)
+console.log(name)

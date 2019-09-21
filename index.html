@@ -26,6 +26,12 @@
     <div class="container">
         <h1 class="title">Javascript Cheatsheet</h1>
         <hr>
+
+        <h2 class="cheat-title">Strict mode</h2>
+
+        <pre><code class="javascript">"use strict";      // Turns on strict mode to write secure mode
+x = 1              // Throws an error, because there is missing var keyword</code></pre>
+
         <h2 class="cheat-title">Varibles</h2>
         <pre><code class="javascript">var variable;                   // variable
 var hello = "Hello World";      // variable string assigment
@@ -42,35 +48,58 @@ var first = 12,
 let z = "zzz";                  // block scope local variable</code></pre>
 
 
+        <h2 class="cheat-title">Data Types</h2>
+        <pre><code class="javascript">var age = 18;                       // Number
+var name = "Jane"                   // String
+var person = {
+    firstName: "Jane",
+    lastName: "Doe"                 // Object
+}
+var truth = false;                  // Boolean
+var sheets = ["HTML", "CSS", "JS"]  // Array
+var a;
+typeof a;                           // Undefined
+var empty = null                    // Null value</code></pre>
 
-    <h2 class="cheat-title">Strict mode</h2>
+        <h2 class="cheat-title">Object</h2>
+        <pre><code class="javascript">var student = {                                     // object name
+    firstName: "Jane",                              // list of properties and values
+    lastName: "Doe",
+    age: 18,
+    height: 180,
+    fullName: function(){                           //object function
+        return this.firstName + " " + lastName
+    }
+}
 
-    <pre><code class="javascript">"use strict";      // Turns on strict mode to write secure mode
-x = 1              // Throws an error, because there is missing var keyword</code></pre>
+student.age = 19;                                   // setting "student" object age property to 19
+student.age++;                                      // increamenting value by one
+var name = student.fullName();                      // calling object function
 
-    <h2 class="cheat-title">Loops</h2>
+console.log(student.age)                            // 20
+console.log(name)                                   // "Jane Doe"</code></pre>
 
-    <pre><code class="javascript">// Do while loop
+
+        <h2 class="cheat-title">Loops</h2>
+
+        <pre><code class="javascript">// Do while loop
 let i = 1;
 do {
     i *= 2;
     console.log(i)
-} while (i < 10);
-</code></pre>
+} while (i < 10);</code></pre>
 
-<pre><code class="javascript">// While loop
+        <pre><code class="javascript">// While loop
 while (i < 10) {
     i++;
     console.log(i);
-}
-</code></pre>
+}</code></pre>
 
 <pre><code class="javascript">// For loop
 let i = 0;
 for(i; i <= 10; i++) {
     console.log(i);
-}
-</code></pre>
+}</code></pre>
 
 
 <pre><code class="javascript">// For loop with break keyword
@@ -81,8 +110,7 @@ for(i; i <= 10; i++) {
         break;
     }
     console.log(i);
-}
-</code></pre>
+}</code></pre>
 
 <pre><code class="javascript">// For loop with break keyword
 let i = 0;
@@ -92,17 +120,17 @@ for(i; i <= 10; i++) {
         continue;
     }
     console.log(i);
-}
-</code></pre>
+}</code></pre>
+
+<h2 class="cheat-title">If Else</h2>
+<pre><code class="javascript"></code></pre>
 
 
-    <h2 class="cheat-title">Strict mode</h2>
-    <pre><code class="javascript">"use strict";   // Turns on strict mode to write secure mode
-x = 1              // Throws an error, because there is missing var keyword</code></pre>
+<h2 class="cheat-title"></h2>
+<pre><code class="javascript"></code></pre>
 
-    <h2 class="cheat-title">Strict mode</h2>
-    <pre><code class="javascript">"use strict";   // Turns on strict mode to write secure mode
-x = 1              // Throws an error, because there is missing var keyword</code></pre>
+    <h2 class="cheat-title"></h2>
+    <pre><code class="javascript"></code></pre>
 
 
     </div>
