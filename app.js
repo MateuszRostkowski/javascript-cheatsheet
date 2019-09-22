@@ -20,7 +20,6 @@ for(let i = 0; i < headings.length; i++) {
         });
     });
 
-
     link.appendChild(listItem)
     contents.appendChild(link)
 }
@@ -36,3 +35,8 @@ scrollToTop.addEventListener(
             behavior: 'smooth'
         })
     })
+
+var d = new Date()           // assig Date current Date object to d variable
+d.getDate()                     //
+
+console.log(d.getDate())

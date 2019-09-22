@@ -8,8 +8,15 @@
     <link rel="stylesheet" href="./main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
     <link rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/monokai-sublime.min.css">
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark-reasonable.min.css">
     <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <style>
+    code {
+        border-radius: 4px;
+        padding: 11px;  
+    }
+
+    </style>
 
 
     <script>
@@ -56,7 +63,7 @@ var first = 12,
 let z = "zzz";                  // block scope local variable</code></pre>
 
 
-        <h2 class="cheat-title"  id="cheat-title-4">Data Types</h2>
+        <h2 class="cheat-title"  id="cheat-title-4">Data Types and Operators</h2>
         <pre><code class="javascript">var age = 18;                       // Number
 var name = "Jane"                   // String
 var person = {
@@ -67,7 +74,17 @@ var truth = false;                  // Boolean
 var sheets = ["HTML", "CSS", "JS"]  // Array
 var a;
 typeof a;                           // Undefined
-var empty = null                    // Null value</code></pre>
+var empty = null                    // Null value
+
+a && b                              // logical and
+a || b                              // logical or 
+a == b                              // equals
+a != b                              // unequals
+a === b                             // strict equals
+a !=== b                            // strict unequals
+a += b                              // a = a + b (same with *, -, /, %)
+a++, a--                            // a = a + 1, a = a - 1
+</code></pre>
 
         <h2 class="cheat-title" id="cheat-title-5">Object</h2>
         <pre><code class="javascript">var student = {                                     // object name
@@ -186,12 +203,34 @@ switch(day) {
 console.log(day)                       // 6 or whatever the day is
 console.log(weekDay)                   // "Saturday"</code></pre>
 
-    <h2 class="cheat-title" id="cheat-title-13"></h2>
-    <pre><code class="javascript"></code></pre>
-    
-    <h2 class="cheat-title" id="cheat-title-14"></h2>
-    <pre><code class="javascript"></code></pre>
-    
+    <h2 class="cheat-title" id="cheat-title-13">Math object</h2>
+    <pre><code class="javascript">var Pi = Math.PI                    // 3.141592653589793
+Math.round(2.3)                     // 2 - rounded
+Math.round(2.5)                     // 3
+Math.pow(2, 5)                      // 32 - 2 to the power of 5
+Math.sqrt(36)                       // 6 - square root
+Math.abs(-3.14)                     // 3.14 - absolute, positive value
+Math.ceil(3.1)                      // 4 - rounded up
+Math.floor(3.8)                     // 3 - rounded down
+Math.sin(0)                         // 0 - sinus of 0, etc.. cos, tan, atan, sain, acos,
+Math.min(1, -1, 2, -2, 3, 4)        // -2 - the lowes value
+Math.max(1, -1, 2, -2, 3, 4)        // 4 - the highest value
+Math.log(1)                         // 0 natural logarithm
+Math.exp(1)                         // 2.7182 pow (E.x)
+Math.random()                       // random number between 0 and 1
+Math.floor(Math.random() * 10) + 1; // random integer, between 1 and 10</code></pre>
+
+    <h2 class="cheat-title" id="cheat-title-14">Date object</h2>
+    <pre><code class="javascript">var d = new Date()              // assig Date current Date object to d variable
+d.getFullYear()                 // get year from date
+d.getMonth()                    // get month of the year 0 - 11
+d.getDate()                     // get day of the month 1 - 31
+d.getHours()                    // get hours of the day 0 - 23
+d.getMinutes()                  // get minutes 0 - 59
+d.getSeconds()                  // get seconds of the minute 0 - 59
+d.getMilliseconds()             // get Milliseconds of the minute 0 - 99
+d.getTime()                     // Milliseconds since 1970 1 january 00 : 00</code></pre>
+
     <h2 class="cheat-title" id="cheat-title-15"></h2>
     <pre><code class="javascript"></code></pre>
 
