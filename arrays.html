@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="./css/main.css">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/array.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark-reasonable.min.css">
@@ -34,15 +37,53 @@
 
         <h2 class="cheat-title" id="cheat-title-1">For Each</h2>
 
-        <pre><code class="javascript">let dogs = ["Golden", "Husky", "Pug"]
-console.log(dogs[0])
-        </code></pre>       
+        
+
+        <pre><code class="javascript">const paragraph = document.querySelector('#sample-1')
+var cars = ["Audi", "BMW", "Mercedes", "Volvo"]
+cars.forEach(displayCars)
+
+function displayCars(item, index) {
+    paragraph.innerHTML += index + ": " + item + "&lt;br&gt;"
+}
+</code></pre>      
+     
+        <div class="ForEachSample">
+            <p id="sample-1"></p>
+        </div>
+
+        <hr>         
+
+        <pre><code class="javascript">const links = document.querySelectorAll('.ForEachSample a')
+
+function changeToBlack() {                          
+    links.forEach((links) => {
+        links.style.color = "black";                // change text color for every link
+    })
+}
+
+links.forEach((links, index) => {
+    links.addEventListener('click', function() {
+        console.log("this: " + this)                // displays curent link in console
+        console.log("index: " + index)              // display index of curent link in console
+        changeToBlack()                             // call changeToBlack function
+        this.style.color = "blue"                   // change text color of curent link
+    })
+})</code></pre>  
+
+        <div class="ForEachSample">
+            <a id="1" href="#home">Home</a>
+            <a id="2" href="#contact">Contact</a>
+            <a id="3" href="#portfolio">Portfolio</a>
+            <a id="4" href="#about">About</a>
+            <a id="5" href="#products">Products</a>
+        </div>
+        
+        <h2 class="cheat-title" id="cheat-title-1">Map</h2>
 
    </div>
 
-   <script>
- 
-   </script>
+   <script src="./js/arrays.js"></script>
 </body>
 </html>
 
