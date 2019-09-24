@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark-reasonable.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <style>
+    
+    code {
+        border-radius: 4px;
+        padding: 11px;
+    }
+
+    </style>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+
+    </script>
+</head>
+<body>
+   <div class="container">
+
+        <h1 class="title">Preloader</h1>
+
+        <p>At first you need to make your html file and add bascic code</p>
+<pre><code class="HTML">&lt;div class="preloader"&gt;
+    &lt;div class="loader"&gt;
+        &lt;div class="loader-inner"&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;h3&gt;Loading website&lt;/h3&gt;
+&lt;/div&gt;
+
+&lt;div class="content none"&gt;
+    Blabla
+&lt;/div&gt;
+</code></pre>
+
+    <p>Next you need to find or make your own a loader, for better performance make it in CSS or use SVG file. These are needed lines of code in CSS. And inside class loader add your own.</p>
+
+    <pre><code class="CSS">body {
+    margin: 0;
+    padding: 0;            
+}
+        
+.preloader {
+    position: fixed;                
+    background-color: white;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    flex-direction: column;
+    transition: opacity 0.5s ease;
+}
+
+.preloader-finish {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.loader {
+    // You can add your own properties here
+    width: 30px;
+    height: 30px;
+    z-index:3;
+    border: 4px solid #566b78;
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    width: 100%;
+    background-color: #566b78;
+    animation: loader-inner 2s infinite ease-in;
+}
+
+.none {
+    display: none;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }  
+    25% {
+        transform: rotate(180deg);
+    }  
+    50% {
+        transform: rotate(180deg);
+    }  
+    75% {
+        transform: rotate(360deg);
+    }  
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%;
+    }  
+    25% {
+        height: 0%;
+    }  
+    50% {
+        height: 100%;
+    }  
+    75% {
+        height: 100%;
+    }  
+    100% {
+        height: 0%;
+    }
+}
+
+    </code></pre>
+
+    <p>And in the end you should add these simple javascript. To the site. It uses the load eventlistener that 
+        checks when site is loaded and then it perform the function inside.
+    </p>
+
+        <pre><code class="javascript">window.addEventListener(
+    'load', 
+    () => {
+        const preloader = document.querySelector('.preloader')
+        const section = document.querySelector('.content')
+        preloader.classList.add('preloader-finish')
+        section.classList.remove('none')
+    }
+)</code></pre>
+    
+   </div>
+
+   <script src="./js/arrays.js"></script>
+</body>
+</html>
+
