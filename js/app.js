@@ -36,7 +36,18 @@ scrollToTop.addEventListener(
         })
     })
 
-var d = new Date()           // assig Date current Date object to d variable
-d.getDate()                     //
 
-console.log(d.getDate())
+
+var pi = "12.2 xdd 14"
+
+
+console.log(parseFloat(pi))
+
+
+try {
+    console.log(Number(fas))
+} catch(err) {
+    console.log(err.message)
+}
+
+var dogs = ["Bulldog", "Beagle", "Labrador"]; console.log(dogs[Math.floor(Math.random() * dogs.length)])

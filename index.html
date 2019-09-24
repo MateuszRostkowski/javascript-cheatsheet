@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Javascript Cheatsheet</title>
-    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark-reasonable.min.css">
@@ -13,7 +13,7 @@
     <style>
     code {
         border-radius: 4px;
-        padding: 11px;  
+        padding: 11px;
     }
 
     </style>
@@ -36,7 +36,7 @@
         <hr>
 
         <ol class="table-of-contents">
-            
+
         </ol>
 
         <h2 class="cheat-title" id="cheat-title-1">Basics</h2>
@@ -77,7 +77,7 @@ typeof a;                           // Undefined
 var empty = null                    // Null value
 
 a && b                              // logical and
-a || b                              // logical or 
+a || b                              // logical or
 a == b                              // equals
 a != b                              // unequals
 a === b                             // strict equals
@@ -128,7 +128,7 @@ while (i < 10) {
 }
 
 console.log(numbers)  // "1, 2, 3, 4, 5, 6, 7, 8, 9, 10, "</code></pre>
-    
+
 <h2 class="cheat-title" id="cheat-title-8">For loop</h2>
 
 <pre><code class="javascript">let i = 0;
@@ -193,10 +193,10 @@ switch(day) {
     case 6:
         weekDay = "Saturday";          // if (day == 6)
         break;
-    case 0: 
+    case 0:
         weekDay = "Sunday";            // if (day == 0)
         break;
-    default: 
+    default:
         weekDay = "Whatever"           // else
 }
 
@@ -231,17 +231,79 @@ d.getSeconds()                  // get seconds of the minute 0 - 59
 d.getMilliseconds()             // get Milliseconds of the minute 0 - 99
 d.getTime()                     // Milliseconds since 1970 1 january 00 : 00</code></pre>
 
-    <h2 class="cheat-title" id="cheat-title-15"></h2>
-    <pre><code class="javascript"></code></pre>
+    <h2 class="cheat-title" id="cheat-title-15">Strings</h2>
+    <pre><code class="javascript">var enter = 'I don\'t \n know'            // \n new line
+var len = enter.length              // string length
+enter.indexOf("know")               // return position, -1 if doesn't contain
+enter.lastIndexOf("know")           // return end position, -1 if doesn't contain
+enter.slice(6,9)                    // cuts out from 6 to 9 letters in string, negative value count from behind
+enter.replace("don\'t'", "do")      // finds and replace, takes regualr expression
+enter.toUpperCase()                 // convert to upper case
+enter.toLowerCase()                 // convert to lower case
+enter.concat(" ", str2)             // abc + " " + str2
+enter.charAt(2)                     // character at index (from 0)
+enter.charCodeAt(2)                 // character code at index 
+enter.split(",")                    // split string on commas, returns array
+enter.split("")                     // split on characters
+128.toString(16)                    // number to hex(16), octal(8) or binary(2)</code></pre>
 
-    <h2 class="cheat-title" id="cheat-title-16"></h2>
-    <pre><code class="javascript"></code></pre>
+    <h2 class="cheat-title" id="cheat-title-16">Numbers and Math</h2>
+    <pre><code class="javascript">var pi = 3.141
+pi.toFixed(0)                   // => 3
+pi.toFixed(2)                   // => 3.14
+p.valueOf()                     // => returns value
+Number(true)                    // converts to number (true = 1, false = 0)
+Number(new Date())              // number of Milliseconds since 1970
+parseInt("3 months")            // returns the first number: 3
+parseFloat("3.5 months")        // returns the first float number: 3.5</code></pre>
+
+    <h2 class="cheat-title" id="cheat-title-17">Arrays </h2>
+    <a href="./arrays.html">Learn more</a>
+    <pre><code class="javascript">console.log(dogs[Math.floor(Math.random() * dogs.length)])
+var dogs = new Array("Bulldog", "Beagle", "Labrador")       // declaration
+
+dogs[0]                         // acces value at index 0
+dogs[0] = "Bull Terier"         // change value at index 0
+
+for(var i = 0; i < dogs.length; i++) {      // parsing with array.length
+    console.log(dogs[i])                
+}
+
+dogs.toString()                         // "Bulldog, Beagle, Labrador"
+dogs.join (" * ")                       // "Buldog * Beagle * Labrador"
+dogs.pop()                              // removes last item
+dogs.push("Golden Retriever")           // adds new element to the end
+dogs[dogs.length] = "Golden Retriever"  // the same as push
+dogs.shift()                            // remove first element
+dogs.unshift()                          // add new element to the begining
+delete dogs[0]                          // change element to undefined (not recomended)
+dogs.splice(2, 0, "Boxer", "Pug")       // add elements (where, how many to remove, element list)
+var animals = dogs.concat(cats, birds)  // join to arrays
+dogs.slice(1,4)                         // elements from [1] to [4 - 1]
+dogs.sort()                             // sort array alphoabethicaly
+dogs.reverse()                          // sort array in descending order
+
+x.sort((a, b) => {                      // numeric sort
+    return a - b
+})
+lowest = x[0]                           // lowest item in sorted array
+
+x.sort((a, b) => {                      // numeric descending sort
+    return b - a
+})
+highest = x[0];                         // highest item in sorted array
+
+x.sort((a, b) => {                      // random order sort
+    return 0.5 - Math.random()
+})
+
+dogs[Math.floor(Math.random() * dogs.length)]            // random item from array</code></pre>
 
 
     </div>
 
     <div id="scroll-to-top" class="show"><i class="fas fa-angle-up"></i></div>
-    
-    <script src="app.js"></script>
+
+    <script src="./js/app.js"></script>
 </body>
 </html>
