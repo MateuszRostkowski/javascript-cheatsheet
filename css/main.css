@@ -29,9 +29,15 @@ body {
     transition: 0.3s ease;
 }
 
-.table-of-contents li:hover {
+.table-of-contents li:hover, .usefull-sites li:hover {
     background-color: rgba(196, 196, 196, 0.507);
 }
+
+.usefull-sites a {
+    text-decoration: none;
+    color: black;
+}
+
 
 #scroll-to-top {
     display: flex;
