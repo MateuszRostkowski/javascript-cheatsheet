@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/array.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-dark-reasonable.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+    <style>
+    
+    code {
+        border-radius: 4px;
+        padding: 11px;
+    }
+
+    </style>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            document.querySelectorAll('pre code').forEach((block) => {
+                hljs.highlightBlock(block);
+            });
+        });
+
+    </script>
+</head>
+<body>
+   <div class="container">
+
+        <h1 class="title">Objects</h1>
+
+        <h2 class="cheat-title" id="cheat-title-1">Javascript dynamically invoke object method from string</h2>
+
+        
+
+        <pre><code class="javascript">function greet(language) {
+    const languages = {
+        english: 'Welcome',
+        czech: 'Vitejte',
+        danish: 'Velkomst',
+        dutch: 'Welkom',
+        estonian: 'Tere tulemast',
+        finnish: 'Tervetuloa',
+        flemish: 'Welgekomen',
+        french: 'Bienvenue',
+        german: 'Willkommen',
+        irish: 'Failte',
+        italian: 'Benvenuto',
+        latvian: 'Gaidits',
+        lithuanian: 'Laukiamas',
+        polish: 'Witamy',
+        spanish: 'Bienvenido',
+        swedish: 'Valkommen',
+        welsh: 'Croeso'
+    }
+  
+    if (languages[language] == undefined) return 'Welcome'
+    else return languages[language]
+}</code></pre>      
+     
+        <pre><code class="javascript"></code></pre>  
+
+               
+        <h2 class="cheat-title" id="cheat-title-1"></h2>
+
+   </div>
+
+   <script src="./js/arrays.js"></script>
+</body>
+</html>
+
